@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos - Liceo Héctor Castillo Reyes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo HCR.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Liceo Héctor Castillo Reyes</h1>
+        </div>
+        <nav id="sidebar-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ubicacion.html">Ubicación</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+        <div class="logo-container">
+            <img src="img/logo HCR.png" alt="logo del Liceo Hector Castillo Reyes" class="logo">
+        </div>
+    </header>
+    <button id="menu-toggle">☰</button>
+    <main>
+        <section id="contactos">
+            <h2>Contactos y Redes Sociales</h2>
+            <p>Para más información, puedes contactarnos a través de:</p>
+            <ul>
+                <li>Correo Electrónico: [tu_correo@example.com]</li>
+                <li>Teléfono: [tu_número_de_teléfono]</li>
+            </ul>
+            <form class="formulario" action="#">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required><br><br>
+
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Reiniciar">
+            </form>
+            <br>
+            <p>Síguenos en nuestras redes sociales:</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/share/1Cee9SuCz3/ " target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/lbhectorcastilloreyes?igsh=OW5ndTlneHl1ZXcz" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Liceo Héctor Castillo Reyes. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
