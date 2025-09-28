@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/logo HCR.png" type="image/png">
 </head>
-
 <body>
     <header>
         <div class="header-content">
@@ -17,6 +16,7 @@
         <nav id="sidebar-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobreNodotros.html">Sobre Nosotros</a></li>
                 <li><a href="ubicacion.html">Ubicación</a></li>
                 <li><a href="contactos.html">Contactos</a></li>
             </ul>
@@ -30,29 +30,26 @@
         <section id="contactos">
             <h2>Contactos y Redes Sociales</h2>
             <p>Para más información, puedes contactarnos a través de:</p>
-            <ul>
-                <li>Correo Electrónico: [tu_correo@example.com]</li>
-                <li>Teléfono: [tu_número_de_teléfono]</li>
-            </ul>
+            
             <form class="formulario" action="#">
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required><br><br>
+                <input type="text" id="nombre" name="nombre" required><br>
 
                 <label for="correo">Correo Electrónico:</label>
-                <input type="email" id="correo" name="correo" required><br><br>
+                <input type="email" id="correo" name="correo" required><br>
 
                 <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br>
 
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Reiniciar">
+                <button type="submit">Enviar</button>
+                <button type="reset">Reiniciar</button>
             </form>
-            <br>
-            <p>Síguenos en nuestras redes sociales:</p>
             <div class="social-media">
-                <a href="https://www.facebook.com/share/1Cee9SuCz3/ " target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/lbhectorcastilloreyes?igsh=OW5ndTlneHl1ZXcz" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
+                <a class="fb" href="https://www.facebook.com/share/1Cee9SuCz3/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="ig" href="https://www.instagram.com/lbhectorcastilloreyes?igsh=OW5ndTlneHl1ZXcz" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="wa" href=""><i class="fab fa-whatsapp"></i></a>
+                <a class="gm" href="mailto:" target="_blank"><i class="fas fa-envelope-open"></i></a>
+            </div> 
         </section>
     </main>
     <footer>

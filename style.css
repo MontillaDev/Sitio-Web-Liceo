@@ -9,11 +9,12 @@ body {
 }
 
 header {
-    background: #004d99;
+    background-color: #004d99;
     color: #fff;
-    padding: 10px 20px;    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
     position: fixed;
     top: 0;
     left: 0;
@@ -22,13 +23,41 @@ header {
     z-index: 1000;
 }
 
+@font-face{
+    font-family: "Mi fuente Personalizada";
+    src: url("avenir-next-similar/karu-font-family/Karu\ Font\ Family/karu-font-family");
+    font-weight: normal;
+    font-style: normal;
+}
+
 p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Mi fuente Personalizada';
+    font-size: 19px;
 }
 
 h2{
     text-transform: uppercase;
+    color: #004d99;
+    text-align: center;
+    line-height: 1.5;
 }
+
+h3{
+    text-align: left;
+}
+
+nav ul li a {
+font-family: 'Arial', sans-serif;
+color: black;
+text-decoration: none;
+transition: font-family 0.3s ease;
+}
+
+/* Estilo al pasar el cursor */
+nav ul li a:hover {
+font-family: 'Courier New', monospace;
+}
+
 
 .logo-container {
     position: absolute;
@@ -47,9 +76,12 @@ h2{
 }
 
 .header-content h1 {
-    margin: 0;
+    margin: 0 10px;
     flex-grow: 1;
     text-align: center;
+    flex-shrink: 0;
+    font-size: 1.3em;
+    line-height: 2.5;
 }
 
 /* Boton del menu */
@@ -63,6 +95,7 @@ h2{
     top: 15px;
     left: 15px;
     z-index: 1001;
+    flex-shrink: 0;
 }
 
 /* menu lateral */
@@ -145,20 +178,13 @@ section {
     background-color: #004d99;
     color: #fff;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
     font-size: 1em;
 }
 
 .header-title h1 {
     color: #ffffff;
-    text-align: center;
-    
-}
-
-h2 {
-    color: #004d99;
-    text-align: center;
+    text-align: center;  
 }
 
 img {
@@ -214,7 +240,6 @@ img {
     width: 3rem;
     height: 3rem;
     background-color: transparent;
-    border: 0.2rem solid #004d99;
     font-size: 1.5rem;
     border-radius: 50%;
     margin: 3rem 1.5rem 3rem 0;
@@ -235,6 +260,39 @@ img {
     line-height: 1;
     border: none;
 }
+
+.social-media a.ig:hover {
+    background: #8A2387;
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+    box-shadow: 0  0 25px #8A2387;
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387);;
+}
+
+.social-media a.fb:hover {
+    background: #4267B2;
+    box-shadow: 0  0 25px #4267B2;
+}
+
+.social-media a.wa:hover {
+    background: #25D366;
+    box-shadow: 0  0 25px #25D366;
+}
+
+.social-media a.gm:hover {
+    background: #EA4335; 
+    box-shadow: 0 0 25px #EA4335; 
+
+    background: linear-gradient(
+        to right,
+        #EA4335 0%, #EA4335 25%, 
+        #4285F4 25%, #4285F4 50%, 
+        #FBBC04 50%, #FBBC04 75%, 
+        #34A853 75%, #34A853 100%
+    );
+}
+
 footer {
     text-align: center;
     padding: 20px;
