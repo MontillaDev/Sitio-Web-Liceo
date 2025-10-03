@@ -46,6 +46,15 @@ h3{
     text-align: left;
 }
 
+em{
+    font-style: normal;
+    font-weight: bold;
+    color: #004d99;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+
 nav ul li a {
 font-family: 'Arial', sans-serif;
 color: black;
@@ -204,6 +213,10 @@ img {
     margin: 0 auto;
     border-radius: 8px;
     width: 500px    ;
+}
+
+img:hover {
+    transform: scale3d(1.03, 1.03, 1);
 }
 
 .image-container {
