@@ -1,21 +1,25 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.getElementById('menu-toggle');
-    const sidebarNav = document.getElementById('sidebar-nav');
+// Corrección forzada para problemas de visualización
+function fixLayoutIssues() {
+    // Forzar ancho correcto en body
+    document.body.style.width = '100%';
+    document.body.style.maxWidth = '100%';
+    
+    // Prevenir scroll horizontal
+    document.body.style.overflowX = 'hidden';
+    document.documentElement.style.overflowX = 'hidden';
+    
+    // Asegurar que el carrusel esté correctamente posicionado
+    const carouselSection = document.querySelector('.carousel-section');
+    if (carouselSection && window.innerWidth <= 768) {
+        carouselSection.style.width = '100%';
+        carouselSection.style.marginLeft = '0';
+        carouselSection.style.marginRight = '0';
+        carouselSection.style.paddingLeft = '0';
+        carouselSection.style.paddingRight = '0';
+    }
+}
 
-    // Alterna el menú al hacer clic en el botón
-    menuToggle.addEventListener('click', () => {
-        sidebarNav.classList.toggle('open');
-    });
-
-    // Cierra el menú si se hace clic en un enlace
-    sidebarNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            sidebarNav.classList.remove('open');
-        }); 
-    });
-});
-
-// ===== CARRUSEL AUTOMÁTICO - COMPATIBLE CON TU CÓDIGO EXISTENTE =====
+// CARRUSEL AUTOMÁTICO
 class Carousel {
     constructor() {
         this.currentSlide = 0;
@@ -78,10 +82,6 @@ class Carousel {
             carousel.addEventListener('mouseleave', () => {
                 this.startAutoPlay();
             });
-            
-            carousel.addEventListener('touchstart', () => {
-                this.stopAutoPlay();
-            });
         }
     }
     
@@ -141,34 +141,39 @@ class Carousel {
     }
 }
 
-// ===== INICIALIZACIÓN CUANDO EL DOM ESTÉ LISTO =====
+// MENÚ LATERAL
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar carrusel
-    new Carousel();
-});
-
-// ===== CORRECCIONES ESPECÍFICAS PARA MÓVILES =====
-function adjustCarouselForMobile() {
-    const carouselSection = document.querySelector('.carousel-section');
-    const viewportWidth = window.innerWidth;
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebarNav = document.getElementById('sidebar-nav');
     
-    if (viewportWidth <= 768 && carouselSection) {
-        // Forzar el ancho completo en móviles
-        carouselSection.style.width = '100vw';
-        carouselSection.style.maxWidth = '100vw';
-        carouselSection.style.marginLeft = '0';
-        carouselSection.style.marginRight = '0';
+    if (menuToggle && sidebarNav) {
+        menuToggle.addEventListener('click', function() {
+            sidebarNav.classList.toggle('open');
+        });
         
-        // Prevenir cualquier desplazamiento
-        document.body.style.overflowX = 'hidden';
+        document.addEventListener('click', function(event) {
+            if (!sidebarNav.contains(event.target) && !menuToggle.contains(event.target)) {
+                sidebarNav.classList.remove('open');
+            }
+        });
+        
+        const navLinks = sidebarNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                sidebarNav.classList.remove('open');
+            });
+        });
     }
-}
-
-// Ejecutar al cargar y al redimensionar
-document.addEventListener('DOMContentLoaded', function() {
-    adjustCarouselForMobile();
-    new Carousel(); // Tu carrusel existente
+    
+    // INICIALIZAR CARRUSEL
+    new Carousel();
+    
+    // APLICAR CORRECCIONES
+    fixLayoutIssues();
 });
 
-window.addEventListener('resize', adjustCarouselForMobile);
-window.addEventListener('orientationchange', adjustCarouselForMobile);
+window.addEventListener('resize', fixLayoutIssues);
+window.addEventListener('orientationchange', fixLayoutIssues);
+
+// Aplicar correcciones también después de que todo cargue
+window.addEventListener('load', fixLayoutIssues);
