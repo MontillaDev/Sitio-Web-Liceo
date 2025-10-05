@@ -1,6 +1,6 @@
 @font-face{
     font-family: "Mi fuente Personalizada";
-    src: url("avenir-next-similar/karu-font-family/Karu\ Font\ Family/karu-font-family");
+    src: url("avenir-next-similar/karu-font-family/Karu Font Family/karu-font-family");
     font-weight: normal;
     font-style: normal;
 }
@@ -13,6 +13,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 header {
@@ -28,11 +29,13 @@ header {
     width:100%;
     box-sizing: border-box;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 p{
     font-family: 'Mi fuente Personalizada';
     font-size: 19px;
+    margin-bottom: 5rem;
 }
 
 h2{
@@ -40,19 +43,20 @@ h2{
     color: #004d99;
     text-align: center;
     line-height: 1.5;
+    margin-bottom: 5rem;
 }
 
 h3{
     text-align: left;
+    margin-top: 5rem;
 }
 
-em{
-    font-style: normal;
-    font-weight: bold;
-    color: #004d99;
-    text-align: center;
-    display: block;
-    margin-bottom: 20px;
+blockquote {
+    border-left: 4px solid #004d99;
+    padding-left: 15px;
+    margin-left: 0;
+    color: #555;
+    font-style: italic;
 }
 
 nav ul li a {
@@ -74,6 +78,8 @@ font-family: 'Courier New', monospace;
     top: 10px;
     width: 50px;
     height: 50px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .header-content {
@@ -145,6 +151,10 @@ font-family: 'Courier New', monospace;
 
 /* Contenido principal */
 main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: block;
     padding-top: 80px;
 }
 
@@ -154,11 +164,19 @@ main p{
 
 section {
     padding: 20px;
-    max-width: 800px;
     margin: 20px auto;
     background: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 8px;
+    max-width: 1000px;
+    width: 90%;
+    box-sizing: border-box;
+    display: block;
+    font-family: 'Mi fuente Personalizada';
+    font-size: 19px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 5rem;
 }
 
 .formulario {
@@ -212,7 +230,8 @@ img {
     display: block;
     margin: 0 auto;
     border-radius: 8px;
-    width: 500px    ;
+    width: 500px;
+    margin-bottom: 5rem;
 }
 
 img:hover {
@@ -303,7 +322,6 @@ img:hover {
 
 .social-media a.gm:hover {
     box-shadow: 0 0 25px #EA4335; 
-
     background: linear-gradient(
         to right,
         #EA4335 0%, #EA4335 25%, 
@@ -332,4 +350,71 @@ footer {
     padding: 20px;
     background: #004d99;
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 1.1em;
+        line-height: 2;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .social-media a {
+        margin: 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px 15px;
+    }
+
+    .header-content h1 {
+        font-size: 1em;
+        margin: 0 5px;
+    }
+
+    main {
+        padding-top: 70px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    
+    h2 {
+        font-size: 1.5em; 
+    }
+
+    .formulario {
+        max-width: 100%;
+    }
+    
+    .map-container iframe {
+        height: 300px;
+    }
+
+    .social-media a {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+        margin: 1rem 0.5rem;
+    }
 }

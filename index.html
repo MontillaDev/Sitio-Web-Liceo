@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liceo Héctor Castillo Reyes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carrusel.css">
     <link rel="icon" href="img/logo HCR.png" type="image/png">
 </head>
 <body>
@@ -18,6 +20,8 @@
                 <li><a href="sobreNodotros.html">Sobre Nosotros</a></li>
                 <li><a href="ubicacion.html">Ubicación</a></li>
                 <li><a href="contactos.html">Contactos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="manualdeusuario.html">Manual de Usuario</a></li>
             </ul>
         </nav>
         <div class="logo-container">
@@ -25,17 +29,87 @@
         </div>
     </header>
     <button id="menu-toggle">☰</button>
+
     <main>
         <section id="inicio">
-            <h2>Bienvenidos al Liceo Héctor Castillo Reyes</h2>
-            <p>Formando el futuro de nuestra comunidad. Brindamos una educación de calidad con valores, dedicación y excelencia académica.</p>
+            <div class="carousel-section">
+                <div class="carousel-container">
+                    <div class="carousel-slides">
+                        <!-- Slide 1 -->
+                        <div class="slide active">
+                            <img src="img/img frente.JPG" alt="Liceo Héctor Castillo Reyes - Frente" class="slide-img">
+                            <div class="slide-content">
+                                <h2 class="slide-title">Liceo Héctor Castillo Reyes</h2>
+                                <p class="slide-subtitle">Formando líderes para el futuro desde 1975</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="slide">
+                            <img src="img/salon 1.JPG" alt="Salones de clase" class="slide-img">
+                            <div class="slide-content">
+                                <h2 class="slide-title">Excelencia Académica</h2>
+                                <p class="slide-subtitle">Infraestructura moderna para un aprendizaje de calidad</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="slide">
+                            <img src="img/pasillo.JPG" alt="Pasillos del Liceo" class="slide-img">
+                            <div class="slide-content">
+                                <h2 class="slide-title">Ambiente Seguro</h2>
+                                <p class="slide-subtitle">Espacios diseñados para el desarrollo integral</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 4 -->
+                        <div class="slide">
+                            <img src="img/entrada.JPG" alt="Entrada principal" class="slide-img">
+                            <div class="slide-content">
+                                <h2 class="slide-title">Comunidad Educativa</h2>
+                                <p class="slide-subtitle">Unidos por la educación de calidad</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Controles de navegación -->
+                    <button class="carousel-control prev" aria-label="Slide anterior">
+                        &#10094;
+                    </button>
+                    <button class="carousel-control next" aria-label="Slide siguiente">
+                        &#10095;
+                    </button>
+                    
+                    <!-- Indicadores -->
+                    <div class="carousel-indicators">
+                        <button class="indicator active" data-slide="0" aria-label="Ir al slide 1"></button>
+                        <button class="indicator" data-slide="1" aria-label="Ir al slide 2"></button>
+                        <button class="indicator" data-slide="2" aria-label="Ir al slide 3"></button>
+                        <button class="indicator" data-slide="3" aria-label="Ir al slide 4"></button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- CONTENIDO ORIGINAL DE TU SECCIÓN INICIO -->
+            <h2>Bienvenidos al Liceo Héctor Castillo Reyes</h2>
+            <p>Donde forjamos el futuro a través de una educación integral de calidad. Con más de 55 años de experiencia, nos enorgullece guiar a nuestros estudiantes desde sus primeros pasos en educación inicial hasta su preparación para la educación superior, formando líderes con valores y competencias para el mundo actual.</p>
+            
             <img src="img/logo HCR.png" alt="Logo del Liceo Héctor Castillo Reyes" class="main-logo">
+            
+            <p>Cultivamos mentes curiosas y corazones solidarios. Nuestro compromiso es proporcionar un ambiente seguro y estimulante donde cada estudiante pueda descubrir sus talentos, desarrollar su potencial máximo y crecer como ciudadano responsable y comprometido.</p>
+            
             <div class="image-container">
                 <img src="img/img frente.JPG" alt="Liceo Héctor Castillo Reyes">
-                <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati architecto veritatis explicabo quos tempora, alias illo delectus laboriosam nulla itaque suscipit voluptatibus earum sed? Libero placeat officia reiciendis qui minima!. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ipsum totam assumenda quae commodi voluptatibus distinctio, illo, ab consequatur, fugit accusantium labore laboriosam? Quae, soluta omnis dolore quos nostrum a.</p>
-                <br>
+                <h3>Donde Forjamos los Líderes del Mañana</h3>
+                <p>"La educación es el arma más poderosa para cambiar el mundo" - y en el Liceo Héctor Castillo Reyes, hacemos de esta frase nuestra misión diaria. Desde 1975, nos hemos consolidado como un pilar educativo en nuestra comunidad, guiando a generaciones de estudiantes desde sus primeros pasos en educación inicial hasta su preparación para la universidad en educación secundaria.</p>
+                <img src="img/salon 1.JPG" alt="salones">
+                <h3>Nuestra Filosofía Educativa</h3>
+                <p>En el Liceo Héctor Castillo Reyes entendemos que la verdadera educación trasciende las aulas. Creemos firmemente que cada estudiante posee talentos únicos y nuestro compromiso es descubrirlos, cultivarlos y potenciarlos. No solo formamos estudiantes exitosos; formamos seres humanos íntegros, críticos y comprometidos con su comunidad y su propio desarrollo.</p>
+                <img src="img/pasillo.JPG" alt="pasillo">
+                <h3>¿Por Qué el Estudio es Nuestro Pilar Fundamental?</h3>
+                <p>El conocimiento es libertad, y en el Liceo Héctor Castillo Reyes motivamos a nuestros estudiantes a entender que:</p>
+                <blockquote>"Estudiar no es solo una obligación, es un privilegio que abre puertas, expande horizontes y transforma realidades. Cada ecuación resuelta, cada libro leído, cada concepto comprendido, es un paso más hacia la versión más capaz de ti mismo."</blockquote><br>
+                
                 <img src="img/entrada.JPG" alt="Liceo Héctor Castillo Reyes">
             </div>
         </section>
