@@ -29,13 +29,12 @@ header {
     width:100%;
     box-sizing: border-box;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.382);
 }
 
 p{
     font-family: 'Mi fuente Personalizada';
     font-size: 19px;
-    margin-bottom: 5rem;
 }
 
 h2{
@@ -52,7 +51,7 @@ h3{
 }
 
 blockquote {
-    border-left: 4px solid #004d99;
+    border-left: 4px solid #ff6b35; 
     padding-left: 15px;
     margin-left: 0;
     color: #555;
@@ -71,6 +70,9 @@ nav ul li a:hover {
 font-family: 'Courier New', monospace;
 }
 
+.main-logo{
+    box-shadow: none;
+}
 
 .logo-container {
     position: absolute;
@@ -80,6 +82,12 @@ font-family: 'Courier New', monospace;
     height: 50px;
     margin-bottom: 0;
     margin-top: 0;
+}
+
+.logo-container img{
+    box-shadow: none;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .header-content {
@@ -166,7 +174,7 @@ section {
     padding: 20px;
     margin: 20px auto;
     background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.549);
     border-radius: 8px;
     max-width: 1000px;
     width: 90%;
@@ -232,6 +240,8 @@ img {
     border-radius: 8px;
     width: 500px;
     margin-bottom: 5rem;
+    margin-top: 5rem;
+    box-shadow: 0 4px 8px   rgba(219, 120, 32, 0.779);
 }
 
 img:hover {
@@ -247,7 +257,7 @@ img:hover {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    
 }
 
 .map-container {

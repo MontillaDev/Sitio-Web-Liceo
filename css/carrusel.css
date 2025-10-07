@@ -99,22 +99,7 @@
     line-height: 1.4;
 }
 
-.slide-cta {
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    background: #ff6b35;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    animation: slideInLeft 0.8s ease-out 0.4s both;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.slide-cta:hover {
+.slide-:hover {
     background: #e55a2b;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -222,11 +207,6 @@
         margin-bottom: 1.5rem;
     }
     
-    .slide-cta {
-        padding: 10px 25px;
-        font-size: 1rem;
-    }
-    
     .slide-content {
         padding: 0 5%;
         align-items: center;
@@ -269,11 +249,6 @@
     .slide-subtitle {
         font-size: 1rem;
         margin-bottom: 1rem;
-    }
-    
-    .slide-cta {
-        padding: 8px 20px;
-        font-size: 0.9rem;
     }
     
     .carousel-control {
