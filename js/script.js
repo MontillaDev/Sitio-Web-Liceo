@@ -1,14 +1,10 @@
-// Corrección forzada para problemas de visualización
 function fixLayoutIssues() {
-    // Forzar ancho correcto en body
     document.body.style.width = '100%';
     document.body.style.maxWidth = '100%';
     
-    // Prevenir scroll horizontal
     document.body.style.overflowX = 'hidden';
     document.documentElement.style.overflowX = 'hidden';
     
-    // Asegurar que el carrusel esté correctamente posicionado
     const carouselSection = document.querySelector('.carousel-section');
     if (carouselSection && window.innerWidth <= 768) {
         carouselSection.style.width = '100%';
@@ -19,7 +15,7 @@ function fixLayoutIssues() {
     }
 }
 
-// CARRUSEL AUTOMÁTICO
+// Carrusel
 class Carousel {
     constructor() {
         this.currentSlide = 0;
@@ -141,7 +137,7 @@ class Carousel {
     }
 }
 
-// MENÚ LATERAL
+// Menu lateral
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
     const sidebarNav = document.getElementById('sidebar-nav');
@@ -164,16 +160,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-    
-    // INICIALIZAR CARRUSEL
     new Carousel();
-    
-    // APLICAR CORRECCIONES
+
     fixLayoutIssues();
 });
 
 window.addEventListener('resize', fixLayoutIssues);
 window.addEventListener('orientationchange', fixLayoutIssues);
-
-// Aplicar correcciones también después de que todo cargue
 window.addEventListener('load', fixLayoutIssues);
