@@ -1,6 +1,6 @@
 @font-face{
     font-family: "Mi fuente Personalizada";
-    src: url("avenir-next-similar/karu-font-family/Karu Font Family/karu-font-family");
+    src: url("../avenir-next-similar/karu-font-family/Karu\ Font\ Family/");
     font-weight: normal;
     font-style: normal;
 }
@@ -20,7 +20,7 @@ body {
 header {
     background-color: #004d99;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 25px;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -179,6 +179,28 @@ section {
     margin-bottom: 5rem;
 }
 
+.contenedor {
+    max-width: 1200px;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 5px;
+    display: block;
+}
+
+.imagenes-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las imágenes en el contenedor */
+    gap: 10px; /* Espacio entre imágenes */
+}
+
+.imagenes-galeria img{
+    max-width: 100%;
+    height: auto;
+    flex: 1 1 200px; /* Las imagenes tendran un ancho base de 200px y se ajustaran */
+    object-fit: cover; /* Para que las imagenes mantengan su proporcion y cubran el espacio */
+}
+
 .formulario {
     display: flex;
     flex-direction: column;
@@ -331,6 +353,8 @@ img:hover {
     box-shadow: 0  0 25px #4267B2;
 }
 
+/* Estilos para WhatsApp y Gmail deshabilitados
+
 .social-media a.wa:hover {
     background: #25D366;
     box-shadow: 0  0 25px #25D366;
@@ -346,6 +370,7 @@ img:hover {
         #34A853 75%, #34A853 100%
     );  
 }
+*/
 
 ::-webkit-scrollbar{
     width: 15px;
@@ -395,6 +420,12 @@ footer {
     .social-media a {
         margin: 1.5rem 1rem;
     }
+
+    .contenedor {
+        padding: 2px;
+        margin-right: 0;
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 600px) {
@@ -418,6 +449,12 @@ footer {
     
     h2 {
         font-size: 1.5em; 
+    }
+
+    .contenedor {
+        padding: 1px;
+        margin-right: 0;
+        margin-left: 0;
     }
 
     .formulario {
