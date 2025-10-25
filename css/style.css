@@ -1,10 +1,3 @@
-@font-face{
-    font-family: "Mi fuente Personalizada";
-    src: url("../avenir-next-similar/karu-font-family/Karu\ Font\ Family/");
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -34,7 +27,7 @@ header {
 }
 
 p{
-    font-family: 'Mi fuente Personalizada';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 19px;
     justify-content: center;
     text-align: justify;
@@ -45,7 +38,10 @@ h2{
     color: #004d99;
     text-align: center;
     line-height: 1.5;
-    margin-bottom: 5rem;
+}
+.titulo{
+    text-align: left;
+    margin-top: 1rem;
 }
 
 h3{
@@ -273,6 +269,41 @@ img:hover {
     border-radius: 8px;
     
 }
+
+.niveles-academicos ul {
+    list-style-type: none;
+    padding: 1rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.niveles-academicos ol{
+    list-style: disc;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #ff6b35;
+    color: white;
+}       
 
 .map-container {
     text-align: center;
