@@ -212,6 +212,7 @@ section {
 
 .formulario button {
     padding: 10px;
+    margin: 15px;
     background: #ffffff;
     color: black;
     border: none;
@@ -219,15 +220,19 @@ section {
     font-size: 1em;
     border-radius: 15px;
     width: 100px;
-    align-self: center;
     font-weight: bold;
-    align-items: center;
 }
 
 .formulario button:hover {
     color: #ffffff;
-    background: black;
+    background: #ff6b35;
     box-shadow: 0 0 25px 0 #131313;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .header-title h1 {
