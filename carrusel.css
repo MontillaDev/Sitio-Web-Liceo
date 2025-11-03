@@ -1,67 +1,75 @@
+/* Estilos para la sección principal del carrusel */
 .carousel-section {
     width: 100%;
     position: relative;
     margin: 0;
     padding: 0;
     margin-top: 0;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    max-width: 1000px;
-    margin: 20px auto;
+    overflow: hidden; /* Oculta contenido que sobresale */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra sutil alrededor */
+    border-radius: 8px; /* Esquinas redondeadas */
+    max-width: 1000px; /* Ancho máximo para pantallas grandes */
+    margin: 20px auto; /* Centrado horizontal con margen superior/inferior */
 }
 
+/* Contenedor principal del carrusel */
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 8px;
+    height: 400px; /* Altura fija del carrusel */
+    overflow: hidden; /* Oculta slides fuera de vista */
+    border-radius: 8px; /* Hereda el borde redondeado */
 }
 
+/* Contenedor de todos los slides */
 .carousel-slides {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
+/* Estilos base para cada slide individual */
 .slide {
-    position: absolute;
+    position: absolute; /* Todos los slides se superponen */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
+    opacity: 0; /* Por defecto invisibles */
+    transition: opacity 0.8s ease-in-out; /* Transición suave de opacidad */
     margin: 0;
     padding: 0;
 }
 
+/* Slide activo - visible */
 .slide.active {
-    opacity: 1;
+    opacity: 1; /* Solo el slide activo es visible */
 }
 
+/* Estilos para las imágenes dentro de los slides */
 .slide-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* La imagen cubre todo el espacio sin distorsionarse */
     display: block;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    float: none !important;
-    max-width: none !important;
-    transform: none !important;
+    margin: 0 !important; /* Fuerza márgenes cero */
+    padding: 0 !important; /* Fuerza padding cero */
+    border: none !important; /* Elimina bordes */
+    border-radius: 0 !important; /* Elimina bordes redondeados */
+    box-shadow: none !important; /* Elimina sombras */
+    float: none !important; /* Evita flotación */
+    max-width: none !important; /* Permite ancho completo */
+    transform: none !important; /* Elimina transformaciones */
 }
 
+/* Contenedor de texto superpuesto sobre las imágenes */
 .slide-content {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    /* Gradiente semitransparente para mejorar legibilidad del texto */
     background: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.900) 0%,
@@ -71,200 +79,219 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    padding: 0 10%;
+    align-items: flex-start; /* Alineación a la izquierda */
+    padding: 0 10%; /* Padding horizontal del 10% */
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra de texto para mejor contraste */
 }
 
+/* Estilos para el título del slide */
 .slide-title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: bold;
-    animation: slideInLeft 0.8s ease-out;
+    animation: slideInLeft 0.8s ease-out; /* Animación de entrada */
     color: white;
     text-transform: none;
     text-align: left;
     line-height: 1.3;
 }
 
+/* Estilos para el subtítulo del slide */
 .slide-subtitle {
     font-size: 1.4rem;
     margin-bottom: 2rem;
     font-weight: 300;
-    animation: slideInLeft 0.8s ease-out 0.2s both;
+    animation: slideInLeft 0.8s ease-out 0.2s both; /* Animación con retardo */
     color: white;
     text-align: left;
     line-height: 1.4;
 }
 
+/* Estilos para botones (aunque no están definidos en el HTML) */
 .slide-:hover {
     background: #e55a2b;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra al hacer hover */
 }
 
-/* Controles de navegación */
+/* Controles de navegacion */
+
+/* Estilos base para botones de navegación (anterior/siguiente) */
 .carousel-control {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%); /* Centrado vertical perfecto */
+    background: rgba(255, 255, 255, 0.3); /* Fondo semitransparente */
     border: none;
     color: white;
     font-size: 2rem;
     padding: 12px 16px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 10;
+    transition: all 0.3s ease; /* Transición suave para efectos hover */
+    z-index: 10; /* Asegura que esté sobre el contenido */
     border-radius: 5px;
 }
 
+/* Efectos al pasar el mouse sobre los controles */
 .carousel-control:hover {
-    background: rgb(219, 120, 32);
-    transform: translateY(-50%) scale(1.1);
+    background: rgb(219, 120, 32); /* Color naranja al hacer hover */
+    transform: translateY(-50%) scale(1.1); /* Ligero aumento de tamaño */
 }
 
+/* Posicionamiento del botón "anterior" */
 .carousel-control.prev {
     left: 15px;
 }
 
+/* Posicionamiento del botón "siguiente" */
 .carousel-control.next {
     right: 15px;
 }
 
-/* Indicadores */
+/* Contenedor de los puntos indicadores */
 .carousel-indicators {
     position: absolute;
     bottom: 15px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Centrado horizontal perfecto */
     display: flex;
-    gap: 10px;
+    gap: 10px; /* Espacio entre indicadores */
     z-index: 10;
 }
 
+/* Estilos para cada punto indicador */
 .indicator {
     width: 12px;
     height: 12px;
-    border-radius: 50%;
-    background: rgb(219, 120, 32);
+    border-radius: 50%; /* Forma circular */
+    background: rgb(219, 120, 32); /* Color naranja */
     border: 2px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 0;
 }
 
+/* Estilo para el indicador activo */
 .indicator.active {
-    background: white;
-    transform: scale(1.2);
+    background: white; /* Color blanco para el activo */
+    transform: scale(1.2); /* Ligero aumento de tamaño */
 }
 
+/* Efecto hover para los indicadores */
 .indicator:hover {
     background: rgba(255, 255, 255, 0.8);
-    transform: scale(1.1);
+    transform: scale(1.1); /* Ligero aumento al hacer hover */
 }
 
-/* Animaciones */
+/* animaciones */
+
+/* Definición de la animación de entrada desde la izquierda */
 @keyframes slideInLeft {
     from {
         opacity: 0;
-        transform: translateX(-50px);
+        transform: translateX(-50px); /* Comienza desplazado a la izquierda */
     }
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0); /* Termina en posición normal */
     }
 }
 
+/* Media Queries */
+
+/* Tablets y pantallas medianas */
 @media (max-width: 1024px) {
     .carousel-container {
-        height: 350px;
+        height: 350px; /* Reduce altura para tablets */
     }
     
     .slide-title {
-        font-size: 2.2rem;
+        font-size: 2.2rem; /* Reduce tamaño de fuente */
     }
     
     .slide-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Reduce tamaño de fuente */
     }
 }
 
+/* Dispositivos móviles grandes */
 @media (max-width: 768px) {
     .carousel-container {
-        height: 300px;
-        border-radius: 0;
+        height: 300px; /* Reduce altura para móviles */
+        border-radius: 0; /* Elimina bordes redondeados */
     }
     
     .slide-title {
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* Reduce tamaño de título */
     }
     
     .slide-subtitle {
-        font-size: 1rem;
+        font-size: 1rem; /* Reduce tamaño de subtítulo */
         margin-bottom: 1.5rem;
-        text-align: center;
+        text-align: center; /* Centra texto en móviles */
     }
     
     .slide-content {
         padding: 0;
-        align-items: center;
-        text-align: center;
+        align-items: center; /* Centra contenido horizontalmente */
+        text-align: center; /* Centra texto */
     }
     
     .carousel-control {
-        font-size: 1.5rem;
-        padding: 10px 12px;
+        font-size: 1.5rem; /* Reduce tamaño de flechas */
+        padding: 10px 12px; /* Reduce padding */
     }
     
     .carousel-control.prev {
-        left: 10px;
+        left: 10px; /* Ajusta posición izquierda */
     }
     
     .carousel-control.next {
-        right: 10px;
+        right: 10px; /* Ajusta posición derecha */
     }
 
     .carousel-section {
         width: 100%;
-        max-width: 100%;
+        max-width: 100%; /* Ocupa ancho completo en móviles */
     }
 }
 
+/* Dispositivos móviles pequeños */
 @media (max-width: 600px) {
     .carousel-section {
-        margin: 10px;
-        border-radius: 8px;
+        margin: 10px; /* Reduce márgenes */
+        border-radius: 8px; /* Mantiene bordes redondeados */
     }
     
     .carousel-container {
-        height: 250px;
+        height: 250px; /* Reduce altura aún más */
     }
     
     .slide-title {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Título más pequeño */
     }
     
     .slide-subtitle {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Subtítulo más pequeño */
         margin-bottom: 1rem;
         text-align: center;
     }
     
     .carousel-control {
-        font-size: 1.2rem;
-        padding: 8px 10px;
+        font-size: 1.2rem; /* Flechas más pequeñas */
+        padding: 8px 10px; /* Padding reducido */
     }
     
     .indicator {
         width: 10px;
-        height: 10px;
+        height: 10px; /* Indicadores más pequeños */
     }
 
+    /* Estilos adicionales para secciones en móviles */
     section {
         margin: 10px;
         padding: 10px;
-        width: auto;
-        }
+        width: auto; /* Ancho automático */
+    }
 }
