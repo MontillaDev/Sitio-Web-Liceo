@@ -1,33 +1,41 @@
-/* Estilos base para toda la página */
+/* Estilos base para toda la pagina */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Color de fondo gris claro */
-    color: #333; /* Color de texto principal */
-    line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
-    overflow-x: hidden; /* Oculta desplazamiento horizontal */
-    margin-top: 5rem; /* Espacio para header fijo */
+    background: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Cabecera fija en la parte superior */
-header {
-    background-color: #004d99; /* Azul oscuro corporativo */
-    color: #fff;
-    padding: 10px 25px;
-    display: flex;
-    justify-content: space-between; /* Distribuye espacio entre elementos */
-    align-items: stretch; /* Elementos ocupan toda la altura */
-    position: fixed; /* Fijo en la parte superior */
+header{
+    margin-bottom: 2rem;
+}
+
+.custom-shape-divider-top-1762389671 {
+    position: absolute;
     top: 0;
     left: 0;
-    width:100%;
-    box-sizing: border-box; /* El padding no afecta el ancho total */
-    z-index: 1000; /* Asegura que esté sobre otros elementos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.382); /* Sombra sutil */
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
 }
 
-/* Estilos para párrafos */
+.custom-shape-divider-top-1762389671 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 132px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1762389671 .shape-fill {
+    fill: #004d99;
+}
+
+/* Estilos para parrafos */
 p{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 19px;
@@ -35,7 +43,7 @@ p{
     text-align: justify; /* Texto alineado a ambos lados */
 }
 
-/* Estilos para títulos h2 */
+/* Estilos para titulos h2 */
 h2{
     text-transform: uppercase; /* Texto en mayúsculas */
     color: #004d99; /* Color azul corporativo */
@@ -43,13 +51,13 @@ h2{
     line-height: 1.5;
 }
 
-/* Clase especial para títulos alineados a la izquierda */
+/* Clase especial para titulos alineados a la izquierda */
 .titulo{
     text-align: left;
     margin-top: 1rem;
 }
 
-/* Estilos para títulos h3 */
+/* Estilos para titulos h3 */
 h3{
     text-align: left;
     margin-top: 5rem; /* Gran margen superior */
@@ -64,15 +72,15 @@ blockquote {
     font-style: italic; /* Texto en cursiva */
 }
 
-/* Estilos para enlaces de navegación */
+/* Estilos para enlaces de navegacion */
 nav ul li a {
 font-family: 'Arial', sans-serif;
 color: black;
 text-decoration: none;
-transition: font-family 0.3s ease; /* Transición suave para cambio de fuente */
+transition: font-family 0.3s ease; /* Transicion suave para cambio de fuente */
 }
 
-/* Efecto hover para enlaces de navegación */
+/* Efecto hover para enlaces de navegacion */
 nav ul li a:hover {
 font-family: 'Courier New', monospace; /* Cambia a fuente monoespaciada */
 }
@@ -83,85 +91,96 @@ font-family: 'Courier New', monospace; /* Cambia a fuente monoespaciada */
 }
 
 /* Contenedor del logo en el header */
-.logo-container {
-    position: absolute; /* Posicionamiento absoluto dentro del header */
-    right: 15px;
-    top: 10px;
-    width: 50px;
-    height: 50px;
+.logo-container {  
+    position: relative;
+    width: 80px;
+    height: 80px;
     margin-bottom: 0;
-    margin-top: 0;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Estilos específicos para la imagen del logo */
+/* Estilos especificos para la imagen del logo */
 .logo-container img{
     box-shadow: none;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/* Contenedor del contenido del header */
-.header-content {
-    width: 100%;
-    max-width: 1500px;
-    display: flex;
-    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     align-items: center;
 }
 
-/* Estilos para el título principal del header */
-.header-content h1 {
+#manualdeusuario{
+    .boton-menu{
+        width: 150px;
+        height: 150px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .img-menu{
+        width: 250px;
+        height: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Estilos para el titulo principal */
+h1 {
     margin: 0 10px;
+    margin-bottom: 2rem;
     flex-grow: 1; /* Ocupa todo el espacio disponible */
     text-align: center;
-    flex-shrink: 0; /* No se reduce de tamaño */
-    font-size: 1.4rem;
-    line-height: 2.5;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: transparent;
+    color: #004d99;
+    position: relative;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra de texto para mejor contraste */
 }
 
-/* =Boton y menu lateral */
+/* Boton y menu lateral */
 
-/* Botón para abrir/cerrar el menú móvil */
+/* Boton para abrir/cerrar el menu movil */
 #menu-toggle {
+    display: none;
     background: none;
     border: none;
-    color: #ffffff;
+    color: #000000;
     font-size: 2em;
     cursor: pointer;
-    position: fixed; /* Fijo en la pantalla */
+    position: fixed;
     top: 15px;
-    left: 15px;
-    z-index: 1001; /* Por encima del menú lateral */
-    flex-shrink: 0;
+    right: 15px;
+    z-index: 1001;
 }
 
-/* Menú lateral (inicialmente oculto) */
+/* Menu lateral (inicialmente oculto) */
 #sidebar-nav {
     position: fixed;
     top: 0;
-    left: -250px; /* Fuera de la pantalla por defecto */
+    right: -250px; /* Fuera de la pantalla por defecto */
     width: 250px;
     height: 100%;
     background: #003366; /* Azul más oscuro */
     padding-top: 60px; /* Espacio para el botón de cerrar */
-    transition: left 0.3s ease; /* Transición suave al mostrar/ocultar */
+    transition: right 0.3s ease; /* Transición suave al mostrar/ocultar */
     z-index: 999;
     box-shadow: 2px 0 5px rgba(0,0,0,0.5); /* Sombra a la derecha */
 }
 
-/* Clase para mostrar el menú lateral */
+/* Clase para mostrar el menu lateral */
 #sidebar-nav.open {
-    left: 0; /* Posición visible */
+    right: 0; /* Posicion visible */
 }
 
-/* Lista del menú lateral */
+/* Lista del menu lateral */
 #sidebar-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/* Enlaces del menú lateral */
+/* Enlaces del menu lateral */
 #sidebar-nav ul li a {
     display: block;
     padding: 15px 20px;
@@ -173,6 +192,97 @@ font-family: 'Courier New', monospace; /* Cambia a fuente monoespaciada */
 /* Efecto hover para enlaces del menú */
 #sidebar-nav ul li a:hover {
     background-color: #004488; /* Azul más claro al pasar el mouse */
+}
+
+/* ===== BARRA DE NAVEGACIÓN PRINCIPAL ===== */
+.main-nav {
+    position: relative;
+    width: 595px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.605);
+    z-index: 999;
+    margin-bottom: 3rem;
+}
+
+.main-nav a {
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    color: #333;
+    text-decoration: none;
+    padding: 0 23px;
+    z-index: 1;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    line-height: 50px;
+    text-align: center;
+}
+
+.main-nav a:hover {
+    color: white;
+}
+
+.nav-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85px;
+    height: 100%;
+    background: linear-gradient(45deg, #ff6b35, #ff8c42);
+    border-radius: 8px;
+    transition: 0.5s ease;
+    z-index: 0;
+}
+
+/* Posiciones específicas para cada enlace */
+.main-nav a:nth-child(1):hover ~ .nav-highlight {
+    left: 0;
+    width: 85px;
+}
+
+.main-nav a:nth-child(2):hover ~ .nav-highlight {
+    left: 85px;
+    width: 150px;
+}
+
+.main-nav a:nth-child(3):hover ~ .nav-highlight {
+    left: 245px;
+    width: 110px;
+}
+
+.main-nav a:nth-child(4):hover ~ .nav-highlight {
+    left: 360px;
+    width: 95px;
+}
+
+/* Ajuste para el sexto enlace "Instalaciones" */
+.main-nav a:nth-child(5):hover ~ .nav-highlight {
+    left: 460px;
+    width: 135px;
+}
+
+#sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar-nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #002244;
+}
+
+#sidebar-nav ul li a:hover {
+    background-color: #004488;
 }
 
 /* Contenido principal */
@@ -188,91 +298,35 @@ section {
     width: 90%;
     box-sizing: border-box;
     display: block;
-    font-family: 'Mi fuente Personalizada'; /* Fuente personalizada */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 19px;
     line-height: 1.6;
     color: #333;
     margin-bottom: 5rem; /* Espacio inferior grande */
 }
 
-/* Contenedor para galería de imágenes */
+/* Contenedor para galería de imagenes */
 .imagenes-galeria{
     display: flex;
-    flex-wrap: wrap; /* Permite que las imágenes pasen a siguiente línea */
+    flex-wrap: wrap; /* Permite que las imagenes pasen a siguiente linea */
     justify-content: center; /* Centra las imágenes horizontalmente */
     gap: 10px; /* Espacio entre imágenes */
 }
 
-/* Imágenes dentro de la galería */
+/* Imagenes dentro de la galeria */
 .imagenes-galeria img{
     max-width: 100%;
     height: auto;
     flex: 1 1 200px; /* Flexibilidad: base 200px, crece y encoge */
-    object-fit: cover; /* Mantiene proporción cubriendo el espacio */
-}
-
-/* Contenedor de formularios */
-.formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Espacio entre elementos del formulario */
-    max-width: 400px;
-    margin: 0 auto; /* Centrado horizontal */
-}
-
-/* Etiquetas de formulario */
-.formulario label {
-    font-weight: bold;
-}
-
-/* Campos de entrada y textarea */
-.formulario input, .formulario textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-    width: 100%;
-    box-sizing: border-box; /* El padding no afecta el ancho total */
-}
-
-/* Botones del formulario */
-.formulario button {
-    padding: 10px;
-    margin: 15px;
-    background: #ffffff;
-    color: black;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
-    border-radius: 15px; /* Bordes muy redondeados */
-    width: 100px;
-    font-weight: bold;
-}
-
-/* Efecto hover para botones */
-.formulario button:hover {
-    color: #ffffff;
-    background: #ff6b35; /* Naranja corporativo */
-    box-shadow: 0 0 25px 0 #131313; /* Sombra pronunciada */
-}
-
-/* Contenedor para grupos de botones */
-.botones {
-    display: flex;
-    justify-content: center; /* Centra botones horizontalmente */
-    gap: 20px; /* Espacio entre botones */
-    margin-top: 3rem;
-}
-
-/* Título del header (color blanco) */
-.header-title h1 {
-    color: #ffffff;
-    text-align: center;  
+    object-fit: cover; /* Mantiene proporcion cubriendo el espacio */
+    display: inline-block;
+    margin: 0 10px;
+    width: 30%; /* Ocupa aproximadamente un tercio del ancho */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Estilos de las imagenes generales */
-
-/* Estilos base para todas las imágenes */
 img {
     max-width: 100%;
     height: auto;
@@ -285,27 +339,18 @@ img {
     box-shadow: 0 4px 8px rgba(219, 120, 32, 0.779); /* Sombra naranja */
 }
 
-/* Efecto hover para imágenes */
+/* Efecto hover para imagenes */
 img:hover {
     transform: scale3d(1.03, 1.03, 1); /* Ligero aumento 3D */
 }
 
-/* Específico para imágenes en galerías */
-.imagenes-galeria img{
-    display: inline-block;
-    margin: 0 10px;
-    width: 30%; /* Ocupa aproximadamente un tercio del ancho */
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-/* Contenedor para imágenes con texto */
+/* Contenedor para imagenes con texto */
 .image-container {
     text-align: center;
     margin-top: 20px;
 }
 
-/* Imágenes dentro de contenedores específicos */
+/* Imagenes dentro de contenedores especificos */
 .image-container img {
     max-width: 100%;
     height: auto;
@@ -320,7 +365,7 @@ img:hover {
     margin-bottom: 1rem;
 }
 
-/* Listas ordenadas en sección de niveles académicos */
+/* Listas ordenadas en sección de niveles academicos */
 .niveles-academicos ol{
     list-style: disc; /* Viñetas tipo disco */
     padding-left: 2rem;
@@ -333,7 +378,7 @@ table {
     border-collapse: collapse; /* Bordes unificados */
     margin-top: 1rem;
     font-size: 0.95rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     margin-left: auto;
     margin-right: auto; /* Centrado horizontal */
@@ -366,7 +411,7 @@ thead th {
     border-radius: 8px;
 }
 
-/* Clase específica para mapa de Google */
+/* Clase especifica para mapa de Google */
 .mapa-google {
     width: 100%;
     height: 450px;
@@ -375,7 +420,7 @@ thead th {
     border-radius: 8px;
 }
 
-/* Títulos en sección de instalaciones */
+/* Titulos en seccion de instalaciones */
 .nuestrasinstalaciones h3{
     text-align: center;
     margin-top: 2rem;
@@ -384,32 +429,29 @@ thead th {
 
 /* Contenedor de iconos de redes sociales */
 .social-media {
-    text-align: center;
-    margin-top: 2rem;
+    text-align: left;
+    display: flex;
+    width: auto;
 }
 
-/* Enlaces de redes sociales */
 .social-media a {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     background-color: transparent;
-    font-size: 1.5rem;
-    border-radius: 50%; /* Forma circular */
-    margin: 3rem 1.5rem 3rem 0;
+    font-size: 1.5rem; /* Tamaño de fuente reducido */
+    border-radius: 50%;
     transition: 0.3s ease;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
-/* Efecto hover para redes sociales */
 .social-media a:hover {
     color: white;
-    transform: scale(1.3) translateY(-5px); /* Aumenta y eleva */
+    transform: scale(1.2) translateY(-3px); /* Efecto más sutil */
     background-color: #004d99;
-    box-shadow: 0  0 25px #004d99;
 }
 
 /* Iconos dentro de enlaces de redes sociales */
@@ -419,38 +461,43 @@ thead th {
     border: none;
 }
 
-/* Efecto hover específico para Instagram */
+/* Efecto hover especifico para Instagram */
 .social-media a.ig:hover {
     background: #8A2387;
     background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);
     background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* Gradiente de Instagram */
-    box-shadow: 0  0 25px #8A2387;
+    box-shadow: 0  0 25px #000000;
 }
 
-/* Efecto hover específico para Facebook */
+/* Efecto hover espeifico para Facebook */
 .social-media a.fb:hover {
     background: #4267B2; /* Azul de Facebook */
-    box-shadow: 0  0 25px #4267B2;
+    box-shadow: 0  0 25px #000000;
 }
 
-/* Estilos para WhatsApp y Gmail deshabilitados
-
-.social-media a.wa:hover {
-    background: #25D366;
-    box-shadow: 0  0 25px #25D366;
+.boton-manual {
+    display: grid;
+    justify-items: center;
 }
 
-.social-media a.gm:hover {
-    box-shadow: 0 0 25px #EA4335; 
-    background: linear-gradient(
-        to right,
-        #EA4335 0%, #EA4335 25%, 
-        #4285F4 25%, #4285F4 50%, 
-        #FBBC04 50%, #FBBC04 75%, 
-        #34A853 75%, #34A853 100%
-    );  
+.boton-manual button{
+    background-color: #ff6b35;
+    color: black;
+    width: 150px;
+    height: 60px;
+    border-radius: 40px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-style: none;
+    box-shadow: 0 0 25px #000000;
+    transition: 0.3s;
 }
-*/
+
+.boton-manual button:hover{
+    transform: scale(1.1) translateY(-3px);
+}
 
 /* Barra de Desplazamiento */
 
@@ -473,17 +520,52 @@ thead th {
 
 /* Media Queries*/
 
-/* Tablets y pantallas medianas */
+/* Tablets */
 @media (max-width: 1024px) {
-    header{
-        padding: 15px 20px; /* Reduce padding lateral */
+    .main-nav {
+        width: 90%;
+        max-width: 490px;
+    }
+
+    .main-nav a {
+        padding: 0 15px;
+        font-size: 0.9em;
+    }
+
+    .nav-highlight{
+        width: 70px; /* Ajusta el ancho del resaltado */
+    }
+
+    .main-nav a:nth-child(1):hover ~ .nav-highlight{
+        left: 0;
+        width: 70px;
+    }
+
+    .main-nav a:nth-child(2):hover ~ .nav-highlight{
+        left: 75px;
+        width: 120px;
+    }
+
+    .main-nav a:nth-child(3):hover ~ .nav-highlight{
+        left: 200px;
+        width: 95px;
+    }
+
+    .main-nav a:nth-child(4):hover ~ .nav-highlight {
+        left: 290px;
+        width: 85px;
+    }
+
+    .main-nav a:nth-child(5):hover ~ .nav-highlight{
+        left: 370px;
+        width: 120px;
     }
 }
 
-/* Dispositivos móviles grandes */
+/* Dispositivos moviles grandes */
 @media (max-width: 768px) {
-    .header-content h1 {
-        font-size: 1.1em;
+    h1 {
+        font-size: 1.8em;
         line-height: 2;
     }
 
@@ -493,15 +575,11 @@ thead th {
 
     section {
         padding: 15px;
-        margin: 15px auto; /* Reduce márgenes */
+        margin: 15px auto; /* Reduce margenes */
     }
 
     img {
-        width: 100%; /* Imágenes a ancho completo */
-    }
-
-    .social-media a {
-        margin: 1.5rem 1rem; /* Reduce márgenes de redes sociales */
+        width: 100%; /* Imagenes a ancho completo */
     }
 
     .contenedor {
@@ -510,34 +588,48 @@ thead th {
         width: 100%;
         max-width: 900px;
     }
-}
 
-/* Dispositivos móviles pequeños */
-@media (max-width: 600px) {
-    header {
-        padding: 15px 15px;
+    .main-nav {
+        display: none;
+    }
+    
+    #menu-toggle {
+        display: block;
     }
 
-    .header-content h1 {
-        font-size: 1em;
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .social-media {
+        justify-content: center;
+    }
+}
+
+/* Dispositivos moviles pequeños */
+@media (max-width: 600px) {
+    header {
+        padding: 5px auto;
+    }
+    
+    h1 {
+        font-size: 1.3em;
         margin: 0 5px;
     }
 
     section {
         margin: 10px;
-        padding: 10px; /* Reduce padding en móviles */
+        padding: 10px; /* Reduce padding en moviles */
     }
 
     p {
-        font-size: 16px; /* Fuente más pequeña en móviles */
+        font-size: 16px; /* Fuente más pequeña en moviles */
     }
     
     h2 {
         font-size: 1.5em; /* Reduce tamaño de títulos */
-    }   
-
-    .formulario {
-        max-width: 100%; /* Formulario ocupa ancho completo */
     }
     
     .map-container iframe {
@@ -548,7 +640,7 @@ thead th {
         width: 2.5rem;
         height: 2.5rem;
         font-size: 1.2rem;
-        margin: 1rem 0.5rem; /* Iconos más pequeños y menos espacio */
+        margin: 1rem 0.5rem; /* Iconos mas pequeños y menos espacio */
     }
 
     .contenedor {
@@ -558,20 +650,43 @@ thead th {
         max-width: 900px;
     }
 
+    .logo-container img{
+        width: 60px;
+        height: 60px;
+        top: 0rem;
+    }
+
     #menu-toggle {
         top: 10px;
-        left: 10px; /* Ajusta posición del botón menú */
+        right: 15px; /* Ajusta posicion del boton menu */
     }
 }
 
+/* Estilos para el pie de página */
 footer {
     padding: 20px;
-    background: #004d99; /* Mismo azul que el header */
+    background: #004d99;
     color: #fff;
-    box-shadow: 0 0 25px #00000091; /* Sombra pronunciada */
+    box-shadow: 0 0 25px #00000091;
 }
 
-/* Párrafo dentro del pie de página */
-.pie_de_pagina p{
+.footer-content {
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+}
+
+/* Contenido centrado */
+.footer-center {
+    flex: 1;
     text-align: center;
+}
+
+.footer-center p {
+    margin: 0;
+    text-align: center;
+    font-size: 1rem;
 }
