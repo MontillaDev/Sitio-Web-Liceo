@@ -637,9 +637,9 @@ thead th {
     }
 
     .social-media a {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.2rem;
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 1rem;
         margin: 1rem 0.5rem; /* Iconos mas pequeños y menos espacio */
     }
 
@@ -659,6 +659,10 @@ thead th {
     #menu-toggle {
         top: 10px;
         right: 15px; /* Ajusta posicion del boton menu */
+    }
+
+    .footer-center p{
+        font-size: 0.7rem;
     }
 }
 
