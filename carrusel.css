@@ -10,6 +10,7 @@
     border-radius: 8px; /* Esquinas redondeadas */
     max-width: 1000px; /* Ancho máximo para pantallas grandes */
     margin: 20px auto; /* Centrado horizontal con margen superior/inferior */
+    margin-bottom: 5rem;
 }
 
 /* Contenedor principal del carrusel */
@@ -26,6 +27,10 @@
     position: relative;
     width: 100%;
     height: 100%;
+}
+
+.carousel-slides h2{
+    position: relative;
 }
 
 /* Estilos base para cada slide individual */

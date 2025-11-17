@@ -108,6 +108,11 @@ font-family: 'Courier New', monospace; /* Cambia a fuente monoespaciada */
     align-items: center;
 }
 
+.logo-container img:hover {
+    transform: none;
+}
+
+
 #manualdeusuario{
     .boton-menu{
         width: 150px;
@@ -337,6 +342,7 @@ img {
     margin-bottom: 5rem;
     margin-top: 5rem;
     box-shadow: 0 4px 8px rgba(219, 120, 32, 0.779); /* Sombra naranja */
+    transition: filter 0.3s ease;
 }
 
 /* Efecto hover para imagenes */
@@ -348,6 +354,10 @@ img:hover {
 .image-container {
     text-align: center;
     margin-top: 20px;
+}
+
+.image-container img:hover{
+    filter: blur(5px);
 }
 
 /* Imagenes dentro de contenedores especificos */
@@ -516,6 +526,87 @@ thead th {
     background: #004d99; /* Azul corporativo */
     border-radius: 12px;
     border: 3px solid #121212;  /* Borde oscuro */
+}
+
+span{
+    font-size: 1.5rem;
+}
+
+.span-conatiner {
+    position: relative;
+}
+
+.text-span {
+    visibility: hidden;
+    width: 450px;
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 1px;
+    position: absolute;
+    z-index: 1;
+    bottom: 50%; /* Posición arriba de la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.span-conatiner:hover .text-span {
+    visibility: visible;
+    opacity: 1;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+h1 {
+    animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes desplazar {
+    0% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
+h2 {
+    animation: desplazar 4s ease-in-out infinite;
+}
+
+h3 {
+    animation: cambioColor 6s ease-in-out infinite;
+}
+
+@keyframes cambioColor {
+    0% {
+        color: #2c3e50;
+        text-shadow: 0 0 5px rgba(44, 62, 80, 0.3);
+    }
+    50% {
+        color: #3498db;
+        text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    }
+    100% {
+        color: #2c3e50;
+        text-shadow: 0 0 5px rgba(44, 62, 80, 0.3);
+    }
 }
 
 /* Media Queries*/
