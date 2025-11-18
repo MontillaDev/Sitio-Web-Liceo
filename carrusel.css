@@ -265,7 +265,7 @@
 /* Dispositivos moviles pequeños */
 @media (max-width: 600px) {
     .carousel-section {
-        margin: 10px; /* Reduce margenes */
+        margin: 10px auto; /* Reduce margenes */
         border-radius: 8px; /* Mantiene bordes redondeados */
     }
     
