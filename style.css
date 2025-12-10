@@ -619,6 +619,10 @@ h3 {
     .main-nav {
         display: none;
     }
+
+    .main-nav a{
+        font-size: 0.9em;
+    }
     
     #menu-toggle {
         display: block;
